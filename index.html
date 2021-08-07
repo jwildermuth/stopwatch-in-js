@@ -13,13 +13,18 @@
   </header>
 
   <main>
-    <p id="timer">00:00:00</p>
-    <button id="stop">Stop</button>
-    <button id="start">Start</button>
-    <button id="reset">Reset</button>
+    <p>
+      <span id="hour"></span>
+      <span id="min"></span>
+      <span id="sec"></span>
+    </p>
+    <button id="stop" onclick="stopTimer()">Stop</button>
+    <button id="start" onclick="runTimer()">Start</button>
+    <button id="reset" onclick="resetTimer()">Reset</button>
   </main>
 
   <footer>
   </footer>
+  <script type="text/javascript" src="stopwatch.js"></script>
 </body>
 </html>

@@ -41,6 +41,11 @@ button {
   transition-duration: 0.4s;
 }
 
+span {
+  color: white;
+  font-size: 90px;
+}
+
 #timer {
   color: white;
   font-size: 100px;

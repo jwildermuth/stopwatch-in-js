@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
+
+:root {
+  --blue: #143D59;
+  --orange: #F4B41A;
+}
+
+body {
+  text-align: center;
+  background: var(--blue);
+  font-family: 'Georama', sans-serif;
+}
+
+header {
+  background: var(--orange);
+  padding: 40px;
+  color: var(--blue);
+  line-height: 90%;
+
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+header h2 {
+  font-size: 30px;
+}
+
+button {
+  background-color: silver;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 20px;
+  transition-duration: 0.4s;
+}
+
+#timer {
+  color: white;
+  font-size: 100px;
+}
+
+#stop:hover {
+  background-color: red;
+  color: white;
+}
+
+#start:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#reset:hover {
+  background-color: darkorange;
+  color: white;
+}

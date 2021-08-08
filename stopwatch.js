@@ -8,20 +8,25 @@ let secs = document.getElementById('sec');
 
 window.onload = resetTimer();
 
+function clean(n, colon = false) {
+  n = n.toLocaleString('en-US', {minimumIntegerDigits: 2});
+  return colon ? n + ':' : n;
+}
+
 function updateDisplay() {
-  hours.innerHTML = h + ':';
-  mins.innerHTML = m + ':';
-  secs.innerHTML = s;
-  console.log(h, m, s);
+  hours.innerHTML = clean(h, true);
+  mins.innerHTML = clean(m, true);
+  secs.innerHTML = clean(s);
+  //console.log(h, m, s);
   s++;
   }
 
 function resetTimer() {
   clearInterval(isRunning);
   h, m, s = 0;
-  hours.innerHTML = '0:';
-  mins.innerHTML = '0:';
-  secs.innerHTML = '0';
+  hours.innerHTML = clean(h, true);
+  mins.innerHTML = clean(m, true);
+  secs.innerHTML = clean(s);
 }
 
 function stopTimer() {

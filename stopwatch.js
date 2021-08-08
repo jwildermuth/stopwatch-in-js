@@ -14,15 +14,25 @@ function clean(n, colon = false) {
 }
 
 function updateDisplay() {
+  if (s == 60) {
+    m++;
+    s = 0;
+  }
+
+  if (m == 60) {
+    h++;
+    m = 0;
+  }
+
   hours.innerHTML = clean(h, true);
   mins.innerHTML = clean(m, true);
   secs.innerHTML = clean(s);
   s++;
-  }
+}
 
 function resetTimer() {
   clearInterval(isRunning);
-  h, m, s = 0;
+  h = m = s = 0;
   hours.innerHTML = clean(h, true);
   mins.innerHTML = clean(m, true);
   secs.innerHTML = clean(s);

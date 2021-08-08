@@ -17,7 +17,6 @@ function updateDisplay() {
   hours.innerHTML = clean(h, true);
   mins.innerHTML = clean(m, true);
   secs.innerHTML = clean(s);
-  //console.log(h, m, s);
   s++;
   }
 
@@ -34,6 +33,6 @@ function stopTimer() {
 }
 
 function runTimer() {
+  s = 1;
   isRunning = setInterval(updateDisplay, 1000);
 }
-

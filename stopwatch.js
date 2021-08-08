@@ -1,3 +1,5 @@
+// jshint esversion: 6
+
 let h = 0;
 let m = 0;
 let s = 0;
@@ -15,13 +17,13 @@ function clean(n, colon = false) {
 
 function updateDisplay() {
   if (s == 60) {
-    m++;
     s = 0;
+    m++;
   }
 
   if (m == 60) {
-    h++;
     m = 0;
+    h++;
   }
 
   hours.innerHTML = clean(h, true);

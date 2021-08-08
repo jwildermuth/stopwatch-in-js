@@ -2,10 +2,10 @@
 
 let h = m = s = 0;
 let isRunning = null;
-let hours = document.getElementById('hour');
-let mins = document.getElementById('min');
-let secs = document.getElementById('sec');
-let laplist = document.getElementById("laps");
+const hours = document.getElementById('hour');
+const mins = document.getElementById('min');
+const secs = document.getElementById('sec');
+const laplist = document.getElementById("laps");
 
 window.onload = resetTimer();
 

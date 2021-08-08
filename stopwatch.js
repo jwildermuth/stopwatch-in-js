@@ -55,5 +55,7 @@ function lapTime() {
 }
 
 function runTimer() {
-  isRunning = setInterval(updateDisplay, 1000);
+  if (!isRunning) {
+    isRunning = setInterval(updateDisplay, 1000);
+  }
 }

@@ -35,13 +35,21 @@ main {
   margin: 70px;
 }
 
-span {
+main span {
   color: white;
   font-size: 110px;
 }
 
+footer {
+  color: #2ecc71;
+  font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 button {
-  background-color: silver;
   border: none;
   border-radius: 8px;
   color: black;
@@ -50,12 +58,13 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 22px;
-  margin: 20px;
+  margin: 10px;
   transition-duration: 0.4s;
+  width: 130px;
 }
 
 button:hover {
-  filter: brightness(150%);
+  filter: brightness(170%);
 }
 
 #stop {
@@ -68,4 +77,8 @@ button:hover {
 
 #reset {
   background-color: darkorange;
+}
+
+#lap {
+  background-color: #bdc3c7;
 }

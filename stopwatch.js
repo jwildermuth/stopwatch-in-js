@@ -16,6 +16,7 @@ function clean(n, colon = false) {
 }
 
 function updateDisplay() {
+  s++;
   if (s == 60) {
     s = 0;
     m++;
@@ -29,7 +30,6 @@ function updateDisplay() {
   hours.innerHTML = clean(h, true);
   mins.innerHTML = clean(m, true);
   secs.innerHTML = clean(s);
-  s++;
 }
 
 function resetTimer() {
@@ -44,7 +44,16 @@ function stopTimer() {
   clearInterval(isRunning);
 }
 
+function lapTime() {
+  const lapNum = document.getElementById("laps").children.length + 1;
+  const now = `${clean(h, true)}${clean(m, true)}${clean(s)}`;
+  mark = `Lap ${lapNum}: ${now}`;
+  const li = document.createElement('li');
+  const txt = document.createTextNode(mark);
+  li.appendChild(txt);
+  document.getElementById('laps').appendChild(li);
+}
+
 function runTimer() {
-  s = 1;
   isRunning = setInterval(updateDisplay, 1000);
 }

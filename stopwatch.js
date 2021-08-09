@@ -1,6 +1,7 @@
 // jshint esversion: 6
 
-let h = m = s = c = 0;
+let h, m, s, c;
+h = m = s = c = 0;
 let isRunning = null;
 const hours = document.getElementById('hour');
 const mins = document.getElementById('min');
@@ -49,6 +50,7 @@ function clearLaps() {
 
 function resetTimer() {
   clearInterval(isRunning);
+  isRunning = null;
   h = m = s = c = 0;
   hours.innerHTML = clean(h, true);
   mins.innerHTML = clean(m, true);

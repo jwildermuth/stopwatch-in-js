@@ -10,7 +10,7 @@ const laplist = document.getElementById("laps");
 
 window.onload = resetTimer();
 
-// Return a formatted hr:min:sec string (00:00:00)
+// Return a 2 digit string (eg '06:' for hr/min OR '06' for sec)
 function clean(n, colon = false) {
   n = n.toLocaleString('en-US', {minimumIntegerDigits: 2});
   return colon ? n + ':' : n;
